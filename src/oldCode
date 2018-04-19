@@ -1,0 +1,76 @@
+    {/* <Motion
+          defaultStyle={{ x: -200, opacity: 0 }}
+          style={{
+            x: spring((this.state.showImages ? 0 : -200), { stiffness: 350, damping: 1 }),
+            opacity: spring((this.state.showImages ? 1 : 0))
+          }}
+        >
+          {(style) => (
+            <div style={{
+              transform: `translateX(${style.x}px)`,
+              opacity: style.opacity
+
+            }}>
+              <img src={mario} className="mario" height="250" alt="mario" width={style.width} />
+              <img src={rene} className="rene" height="250" alt="rene" width={style.width} />
+              <img src={ethan} className="ethan" height="250" alt="ethan" width={style.width} />
+              <img src={misa} className="misa" height="250" alt="misa" width={style.width} />
+            </div>
+          )}
+        </Motion> */}
+        {/* this just shuffles the images
+         {this.shuffle(names)} */}
+        {/* <div className="roulette-inner" style={rouletteStyle}>
+          <img src={mario} className="mario" height="250" width="200" alt="mario" style={imgStyle} />
+          <img src={rene} className="rene" height="250" width="200" alt="rene" style={imgStyle} />
+          <img src={ethan} className="ethan" height="250" width="200" alt="ethan" style={imgStyle} />
+          <img src={misa} className="misa" height="250" width="200" alt="misa" style={imgStyle} />
+          <img src={kyle} className="kyle" height="250" width="200" alt="kyle" style={imgStyle} />
+          <img src={pete} className="pete" height="250" width="200" alt="pete" style={imgStyle} />
+        </div> */}
+
+
+
+
+
+
+        //////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////
+        Original marquee and marquee2
+
+        /* original marquee and marquee 2 */
+.marquee {
+  width: auto;
+  max-width: 150px;
+  height: 190px;
+  margin-top: 15%;
+  /* margin-left: 5%; */
+  /* padding-right: 26%;
+  padding-left: 0%; */
+  text-align: center;
+  background-color: black;
+  border: 10px solid aqua;
+  color: aqua;
+  border-image: repeating-linear-gradient( 45deg, aqua, aqua 1%, rgb(57, 57, 196) 1%, rgb(57, 57, 196) 8% ) 10;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee2 {
+  width: auto;
+  max-width: 150px;
+  height: 190px;
+  margin-top: 15%;
+  /* margin is the movement of the qhole square */
+  /* padding-right: 26%; */
+  /* padding-left: 10%; */
+  text-align: center;
+  background-color: black;
+  border: 10px solid rgb(57, 57, 196);
+  color: rgb(57, 57, 196);
+  border-image: repeating-linear-gradient( 45deg, rgb(57, 57, 196), rgb(57, 57, 196) 1%, aqua 1%, aqua 8% ) 10;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}

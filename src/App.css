@@ -1,0 +1,301 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.button {
+  text-align: center;
+}
+
+#main {
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: 0px 0px 0px 0px;
+  
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 25px;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+}
+
+
+
+table {
+  /* width: 100%; */
+  /* border-collapse: collapse; */
+  table-layout: fixed;
+  margin: 0 auto;
+  /* width: 50%; */
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  float: 25%;
+}
+
+ul#pics0.marioAnimation {
+  padding-top: 0;
+}
+
+ul#pics1.marioAnimation {
+  padding-top: 0;
+}
+ul#pics2.marioAnimation {
+  padding-top: 0;
+}
+ul#pics3.marioAnimation {
+  padding-top: 0;
+}
+ul#pics4.marioAnimation {
+  padding-top: 0;
+}
+ul#pics5.marioAnimation {
+  padding-top: 0;
+}
+
+.marqueeRed {
+  width: auto;
+  max-width: 150px;
+  height: 190px;
+  margin-top: 15%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: black;
+  border: 9px solid red;
+  color: red;
+  border-image: repeating-linear-gradient( 45deg, red, red 1%, rgb(57, 57, 196) 1%, rgb(57, 57, 196) 8% ) 10;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee2Red {
+  width: auto;
+  max-width: 150px;
+  height: 190px;
+  margin-top: 15%;
+  /* margin is the movement of the qhole square */
+  text-align: center;
+  background-color: black;
+  border: 9px solid rgb(57, 57, 196);
+  color: rgb(57, 57, 196);
+  border-image: repeating-linear-gradient( 45deg, rgb(57, 57, 196), rgb(57, 57, 196) 1%, red 1%, red 8% ) 10;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+.marquee {
+  width: auto;
+  max-width: 150px;
+  height: 190px;
+  margin-top: 15%;
+  text-align: center;
+  vertical-align: middle;
+  background-color: black;
+  border: 9px solid aqua;
+  color: aqua;
+  border-image: repeating-linear-gradient( 45deg, aqua, aqua 1%, rgb(57, 57, 196) 1%, rgb(57, 57, 196) 8% ) 10;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee2 {
+  width: auto;
+  max-width: 150px;
+  height: 190px;
+  margin-top: 15%;
+  /* margin is the movement of the qhole square */
+  text-align: center;
+  background-color: black;
+  border: 9px solid rgb(57, 57, 196);
+  color: rgb(57, 57, 196);
+  border-image: repeating-linear-gradient( 45deg, rgb(57, 57, 196), rgb(57, 57, 196) 1%, aqua 1%, aqua 8% ) 10;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* color: rgb(57, 57, 196);
+  border-image: repeating-linear-gradient( 45deg, rgb(57, 57, 196), rgb(57, 57, 196) 1%, aqua 1%, aqua 8% ) 10; */
+
+
+.misaAnimation {
+  display: inline-block;
+  padding-top: 100%;
+  animation-timing-function: ease-in-out;
+  animation: marquee 1s linear 0s, marquee 1s linear 1s, marquee 1s linear 2s, marquee 1s linear 3s, 
+  marquee2 2s linear 4s, misa 3s forwards 6s;
+  
+  /* marquee2 3s linear 0s, marquee23 3.5s forwards 3.5s; */
+
+  /*before edits:  marquee 1s linear 0s, marquee 1s linear 1s, marquee 1s linear 2s, marquee 1s linear 3s, 
+  marquee2 2s linear 4s, marquee23 4s linear 5s, marquee3 4s forwards 6s; */
+  /* marquee2 3s linear 2s; */
+  /* animation: move 10s linear infinite; */
+}
+
+.peterAnimation {
+  display: inline-block;
+  padding-top: 100%;
+  animation-timing-function: ease-in-out;
+  animation: marquee 1s linear 0s, marquee 1s linear 1s, marquee 1s linear 2s, marquee 1s linear 3s, 
+  marquee2 2s linear 4s, peter 3.5s forwards 6s;
+
+}
+
+.reneAnimation {
+  display: inline-block;
+  padding-top: 100%;
+  animation-timing-function: ease-in-out;
+  animation: marquee 1s linear 0s, marquee 1s linear 1s, marquee 1s linear 2s, marquee 1s linear 3s, 
+  marquee2 2s linear 4s, rene 3.5s forwards 6s;
+
+}
+
+.marioAnimation {
+  display: inline-block;
+  padding-top: 100%;
+  animation-timing-function: ease-in-out;
+  animation: marquee 1s linear 0s, marquee 1s linear 1s, marquee 1s linear 2s, marquee 1s linear 3s, 
+  marquee 1s linear 4s, marquee2mario 2s linear 5s, mario 3.5s forwards 7s;
+
+}
+
+.kyleAnimation {
+  display: inline-block;
+  padding-top: 100%;
+  animation-timing-function: ease-in-out;
+  animation: marquee 1s linear 0s, marquee 1s linear 1s, marquee 1s linear 2s, marquee 1s linear 3s, 
+  marquee2 2s linear 4s, kyle 3.5s forwards 6s;
+
+}
+
+.ethanAnimation {
+  display: inline-block;
+  padding-top: 100%;
+  animation-timing-function: ease-in-out;
+  animation: marquee 1s linear 0s, marquee 1s linear 1s, marquee 1s linear 2s, marquee 1s linear 3s, 
+  marquee2 2s linear 4s, ethan 3.5s forwards 6s;
+
+}
+
+
+
+
+@keyframes marquee {
+  0% { transform: translate(0, 0);}
+  100% { transform: translate(0, -85.4%)}
+}
+
+@keyframes marquee2 {
+  0% { transform: translate(0, 0%);}
+  75% {transform: translate(0, -78.4%)}
+  100% { transform: translate(0, -85.4%)}
+}
+
+@keyframes marquee2mario {
+  0% { transform: translate(0, 0%);}
+  75% {transform: translate(0, -78%)}
+  100% { transform: translate(0, -90%)}
+}
+
+
+@keyframes misa {
+  /* 
+  use this example, slot machine style becasue it lands on image and goes to next 
+  these are the percentages for each image, use them 
+  */
+  
+  0% {transform: translate(0, 18%)}
+  10% {transform: translate(0, 0)}
+  25% {transform: translate(0, -26%)} 
+  50% {transform: translate(0, -41%)}
+  100% {transform: translate(0, -55.8%)}
+}
+
+@keyframes peter {
+  /* 
+  stuff on the translate (0, -%) 
+  the negative is the image position, and the 
+  0%
+  60%
+  parts on the far left are the image duration percentage, it matters
+  */
+  0% {transform: translate(0, -5%)}
+  5% {transform: translate(0, 0)}
+  20% {transform: translate(0, -26%)} 
+  40% {transform: translate(0, -41%)}
+  60% {transform: translate(0, -55.8%)}
+  80% {transform: translate(0, -70.4%)}
+  100% {transform: translate(0, -85.4%)}
+}
+
+@keyframes rene {
+  0% {transform: translate(0, -5%)}
+  5% {transform: translate(0, 0)}
+  100% {transform: translate(0, -26%)} 
+}
+
+@keyframes mario {
+  0% {transform: translate(0, -5%)}
+  15% {transform: translate(0, 0)}
+}
+
+@keyframes kyle {
+  0% {transform: translate(0, -5%)}
+  5% {transform: translate(0, 0)}
+  25% {transform: translate(0, -26%)} 
+  50% {transform: translate(0, -41%)}
+  75% {transform: translate(0, -55.8%)}
+  100% {transform: translate(0, -70.4%)}
+}
+
+@keyframes ethan {
+  0% {transform: translate(0, -5%)}
+  5% {transform: translate(0, 0)}
+  50% {transform: translate(0, -26%)} 
+  100% {transform: translate(0, -41%)}
+}
