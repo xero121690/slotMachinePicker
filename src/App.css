@@ -217,7 +217,8 @@ ul#pics5.marioAnimation {
   display: inline-block;
   padding-top: 100%;
   animation-timing-function: ease-in-out;
-  animation: marquee 1s linear 0s, marquee 1s linear 1s, marquee 1s linear 2s, marquee 1s linear 3s, 
+  /* this test is coming from App.js */
+  animation: test 1s linear 0s, test 1s linear 1s, test 1s linear 2s, test 1s linear 3s, 
   marquee2 2s linear 4s, ethan 3.5s forwards 6s;
 
 }

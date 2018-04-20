@@ -16,71 +16,54 @@ class App extends Component {
       showImages: false
     }
     this.doAction = this.doAction.bind(this)
-    this.refreshPage = this.refreshPage.bind(this);
-    this.sound = new Audio(hook);
+    this.refreshPage = this.refreshPage.bind(this)
+    this.sound = new Audio(hook)
   }
 
   shuffle (a) {
     var j, x, i
     for (i = 0; i < a.length; i++) {
-      j = Math.floor(Math.random() * (i + 1));
-      x = a[i];
-      a[i] = a[j];
-      a[j] = x;
+      j = Math.floor(Math.random() * (i + 1))
+      x = a[i]
+      a[i] = a[j]
+      a[j] = x
     }
     return a
-    // const listNames = a.map((name) =>
-    //   <li>{name}</li>
-    // );
-    // return (
-    //   <ul>{listNames}</ul>
-    // )
   }
 
-  generateRandom () {
-    var randomNum = (Math.random() * 5 + 1);
-    randomNum = Math.round(randomNum);
-    console.log(randomNum)
-  }
-
-  returnCssAnimation (i, namesRandom, e, f) {
+  returnCssAnimation (i, namesRandom, ulID, borderID) {
     if (i === 5) {
-      console.log(i)
       setTimeout(() => {
         var cssAnimation = namesRandom
-        e.className = cssAnimation
-        setInterval(() => this.changeBorderRed(f), 180)
+        ulID.className = cssAnimation
+        setInterval(() => this.changeBorderRed(borderID), 180)
       }, i * 5000)
     } else {
       setTimeout(() => {
         var cssAnimation = namesRandom
-        e.className = cssAnimation
-        setInterval(() => this.changeBorder(f), 180)
+        ulID.className = cssAnimation
+        setInterval(() => this.changeBorder(borderID), 180)
       }, i * 5000)
     }
   }
 
   doAction () {
-    this.sound.play();
+    this.sound.play()
     var names = ['ethanAnimation', ' marioAnimation', 'reneAnimation', 'misaAnimation', 'kyleAnimation', 'peterAnimation'];
     var elementsID = ['pics0', 'pics1', 'pics2', 'pics3', 'pics4', 'pics5']
-    var borderID = ['border0', 'border1', 'border2', 'border3', 'border4', 'border5']
+    var bordersID = ['border0', 'border1', 'border2', 'border3', 'border4', 'border5']
     var copyNames = JSON.parse(JSON.stringify(names))
-
-    // var shuffledNames = this.shuffle(names);
-    // var shuffledElementsID = this.shuffle(elementsID);
 
     // copyNames only used to keep track of the length while names is the original that gets modified
     for (var i = 0; i < copyNames.length; i++) {
       var randomNum = Math.floor(Math.random() * ((names.length - 1) + 1))
-      var e = document.getElementById(elementsID[randomNum])
-      var f = document.getElementById(borderID[randomNum])
-      this.returnCssAnimation(i, names[randomNum], e, f)
-      // setInterval(this.changeBorder(f), 180)
-      // e.className = cssAnimation
+      var ulID = document.getElementById(elementsID[randomNum])
+      var borderID = document.getElementById(bordersID[randomNum])
+      this.shuffle(names)
+      this.returnCssAnimation(i, names[randomNum], ulID, borderID)
 
       elementsID.splice(randomNum, 1)
-      borderID.splice(randomNum, 1)
+      bordersID.splice(randomNum, 1)
       names.splice(randomNum, 1)
     }
   }
@@ -112,17 +95,22 @@ class App extends Component {
     var imgStyle = {
       // display block is the strip of the images
       display: 'block',
-      // height="175" width="135"
     }
 
     var rouletteStyle = {
       position: 'relative',
       top: '-16px',
-      // the negative pixel (-1400) takes the images upward relative to the background
-      // transform: 'translate(0px, 0px)'
     }
 
     // var names = [ethan, mario, rene, misa, kyle, pete];
+    // this is a test to see if keyframes work, this test will be under ethanAnimation animation keyframe
+    var styleSheetElement = document.createElement('style')
+    var customStyleSheet;
+    document.head.appendChild(styleSheetElement)
+
+    customStyleSheet = document.styleSheets[0];
+    var percentTest = -85.4 + '%';
+    customStyleSheet.insertRule('@keyframes test {0% { transform: translate(0, 0);} 100% { transform: translate(0, ' + percentTest + ')}}')
 
     return (
       <div className="App">
